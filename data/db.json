@@ -1,0 +1,46 @@
+{
+  "suppliers": [
+    {
+      "id": "13",
+      "name": "Vitarela LTDA",
+      "cnpj": "99.815.169/0001-67",
+      "email": "sac@vitarela.com.br"
+    },
+    {
+      "id": "14",
+      "name": "São Bras LTDA",
+      "cnpj": "71.615.761/0001-04",
+      "email": "sac@saobras.com.br"
+    },
+    {
+      "id": "cdfc",
+      "name": "ABC fornecedor",
+      "cnpj": "12323423423423",
+      "email": "casa@gmail.com"
+    },
+    {
+      "id": "15",
+      "name": "Maria LTDA",
+      "cnpj": "15.315.262/0001-05",
+      "email": "sac@maria.com.br"
+    },
+    {
+      "id": "16",
+      "name": "GSX Distribuidora LTDA",
+      "cnpj": "23.315.123/0001-01",
+      "email": "sac@gxdistribuidora.com.br"
+    },
+    {
+      "id": "17",
+      "name": "Gracejo Alimentos LTDA",
+      "cnpj": "22.315.120/0001-05",
+      "email": "sac@maria.com.br"
+    },
+    {
+      "id": "18",
+      "name": "Varman Distribuidora LTDA",
+      "cnpj": "41.105.123/0001-10",
+      "email": "sac@gxdistribuidora.com.br"
+    }
+  ]
+}

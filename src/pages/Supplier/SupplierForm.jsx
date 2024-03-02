@@ -1,11 +1,24 @@
-import React, { useState }  from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState }  from 'react'
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from '../../api'
 
 const SupplierForm = () => {
 
     const [supplier, setSupplier] = useState({name: '', cnpj: '', email: ''})
     const navigate = useNavigate()
+    const { id } = useParams()
+
+    useEffect(() => {
+        if(id){
+            axios.get(`/suppliers/${id}`)
+            .then(response => {
+                setSupplier(response.data)
+            })
+            .catch(error => console.error("Error ao buscar fornecedor", error))
+        }else{
+            setSupplier({name: '', cnpj: '', email: ''})
+        }
+    }, [id])
 
     function handleChange(event) {
         const { name, value } = event.target
@@ -15,17 +28,20 @@ const SupplierForm = () => {
     function handleSubmit(event) {
         event.preventDefault() //impede que a pagina seja recarregada ao apertar no botão submit
 
-        axios.post('/suppliers', supplier)
+        const method = id ? 'put' : 'post' 
+        const url = id ? `/suppliers/${id}` : "/suppliers"
+
+        axios[method](url, supplier)
         .then(() => {
-            alert("Fornecedor adicionado com sucesso.")
-            navigate("/") //redireionar para pagina principal
+            alert(`Fornecedor ${id ? "atualizado" : "adicionado"} com sucesso.`)
+            navigate("/listar-fornecedores") //redireionar para pagina principal
         })
         .catch(error => console.error("Ocorreu um erro ao obter um fornecedor: ", error))
     }
 
   return (
     <div className='container mt-5'>
-        <h2>Adicionar Fornecedor</h2>
+        <h2>{id ? 'Editar Fornecedor' : 'Adicionar Fornecedor'}</h2>
 
         <form action="" onSubmit={handleSubmit}>
             <div className='form-group'>
@@ -66,7 +82,9 @@ const SupplierForm = () => {
                 onChange={handleChange} 
                 required/>
             </div>
-            <button type='submit' className='btn btn-success'>Adicionar</button>
+            <button 
+                type='submit' 
+                className={id ? 'btn btn-warning' : 'btn btn-success'}>{id ? 'Editar' : 'Adicionar'}</button>
         </form>
 
     

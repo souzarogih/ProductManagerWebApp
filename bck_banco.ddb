@@ -42,40 +42,33 @@
       "id": 161,
       "name": "Placa mãe asus",
       "price": 3500.00,
-      "stock": 200,
       "supplierId": 16
     },
     {
       "id": 162,
       "name": "Placa de video nvidia",
       "price": 2000.00,
-      "stock": 120,
       "supplierId": 16
     },{
       "id": 163,
       "name": "Placa de Vídeo Gforce",
       "price": 3500.00,
-      "stock": 70,
       "supplierId": 16
     },{
       "id": 171,
       "name": "Macarrão Vitarela",
       "price": 5.00,
-      "stock": 34,
       "supplierId": 16
     },
     {
       "id": 172,
       "name": "Arroz Tio João",
       "price": 10.45,
-      "stock": 104,
       "supplierId": 16
-    },
-    {
+    },{
       "id": 173,
       "name": "Feijão Cometa",
       "price": 3.98,
-      "stock": 26,
       "supplierId": 16
     }
   ]

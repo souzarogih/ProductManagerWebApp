@@ -61,7 +61,7 @@ const ProductForm = () => {
             id='name'
             name='name'
             value={product.name}
-            placeholder='Fornecedor abc'
+            placeholder='Mouse Gamer'
             onChange={handleChange}
             required />
         </div>
@@ -103,12 +103,17 @@ const ProductForm = () => {
         </div>
         <button
           type='submit'
-          className={id ? 'btn btn-warning' : 'btn btn-success'}>{id ? 'Editar' : 'Adicionar'}
+          title='Salvar'
+          className={id ? 'btn btn-warning mr-2 mb-2 m-1' : 'btn btn-success mr-2 mb-2 m-1'}>{id ? 'Editar' : 'Adicionar'}
         </button>
+
         <button
+          onClick={() => navigate('/listar-produtos')} 
+          title='Cancelar'
           type='submit'
-          className='btn btn-danger m'>Cancelar
+          className='btn btn-danger mr-2 mb-2 m-1'>Cancelar
         </button>
+
       </form>
 
 

@@ -181,10 +181,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from '../../api';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faPenToSquare, faTrash, faPlus, faArrowsRotate, faEye } from '@fortawesome/free-solid-svg-icons';
+import { faPenToSquare, faTrash, faPlus, faArrowsRotate, faEye } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 
 const SupplierList = () => {
+
     const [suppliers, setSuppliers] = useState([]);
     const [selectedSupplierId, setSelectedSupplierId] = useState(null);
     const navigate = useNavigate();
@@ -258,7 +259,9 @@ const SupplierList = () => {
                 <tbody>
                     {
                         suppliers.map(supplier => (
-                            <tr key={supplier.id} className={selectedSupplierId === supplier.id ? 'selected-row' : ''} onClick={() => setSelectedSupplierId(supplier.id)}>
+                            <tr key={supplier.id} 
+                            className={selectedSupplierId === supplier.id ? 'selected-row' : ''} 
+                            onClick={() => setSelectedSupplierId(supplier.id)}>
                                 <td>{supplier.name}</td>
                                 <td>{supplier.cnpj}</td>
                                 <td>{supplier.email}</td>

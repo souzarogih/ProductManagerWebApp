@@ -43,11 +43,11 @@ const ProductList = () => {
     }
 
     function getProduct(id) {
-        axios.delete(`/product/${id}`)
+        axios.get(`/product/${id}`)
             .then(() => {
 
             })
-            .catch(error => console.error("Ocorreu um erro ao excluir um produto: ", error))
+            .catch(error => console.error("Ocorreu um erro ao obter um produto: ", error))
     }
 
 

@@ -10,25 +10,13 @@
       "id": 17,
       "name": "Gracejo Alimentos LTDAAAAAAAA",
       "cnpj": "22.315.120/0001-05",
-      "email": "sac@maria.com.br"
-    },
-    {
-      "id": 18,
-      "name": "Varman Distribuidora LTDA",
-      "cnpj": "41.105.123/0001-10",
-      "email": "sac@gxdistribuidora.com.br"
+      "email": "sac@gracejo.com.br"
     },
     {
       "id": 19,
       "name": "Paraiba Peças LTDA",
       "cnpj": "23.315.839/0001-01",
       "email": "sac@pbpecas.com.br"
-    },
-    {
-      "id": 20,
-      "name": "Semear sementes LTDA",
-      "cnpj": "22.426.320/0001-05",
-      "email": "sac@semear.com.br"
     },
     {
       "id": 21,
@@ -84,9 +72,9 @@
   "costumers": [
     {
       "id": 1,
-      "name": "João Silva 2",
-      "cpf": "123.123.123-12",
-      "email": "joao@gmail.com",
+      "name": "João Silva",
+      "cpf": "700.113.440-67",
+      "email": "joaosilva@gmail.com",
       "zipcode": "55555-555",
       "street": "Rua de Teste",
       "number": "100",
@@ -96,9 +84,9 @@
       "country": "Brasil"
     },
     {
-      "name": "Zezinho",
-      "cpf": "123123",
-      "email": "zezin@gmail.com",
+      "name": "Pedro Matias",
+      "cpf": "712.628.820-44",
+      "email": "pedromatias@gmail.com",
       "zipcode": "58079000",
       "street": "Rua Josefa Miranda Freire",
       "number": "105",
@@ -109,8 +97,8 @@
       "id": 2
     },
     {
-      "name": "Higor Souza Souza de Andrade",
-      "cpf": "064.650.094-55",
+      "name": "Higor Souza",
+      "cpf": "712.628.820-44",
       "email": "higor.andrade@hotmail.com",
       "zipcode": "58058-300",
       "street": "Rua Estudante Marizete da Silva Nascimento",
@@ -122,9 +110,9 @@
       "id": 3
     },
     {
-      "name": "José",
-      "cpf": "12345678990078675643",
-      "email": "jose@hotmail.com",
+      "name": "João Paulo",
+      "cpf": "087.662.100-03",
+      "email": "joaopaulo@hotmail.com",
       "zipcode": "58078230",
       "street": "Rua Psicóloga Simone Pereira Souto",
       "number": "234",
@@ -133,6 +121,19 @@
       "state": "PB",
       "country": "Brasil",
       "id": 4
+    },
+    {
+      "name": "Maria José",
+      "cpf": "299.913.730-39",
+      "email": "mariajose@hotmail.com",
+      "zipcode": "58078230",
+      "street": "Rua Psicóloga Simone Pereira Souto",
+      "number": "234",
+      "neighborhood": "Funcionários",
+      "city": "João Pessoa",
+      "state": "PB",
+      "country": "Brasil",
+      "id": 5
     }
   ]
 }

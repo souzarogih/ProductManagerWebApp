@@ -1,5 +1,6 @@
 import React from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Modal from 'react-modal';
 import Navbar from './components/Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import SupplierList from './pages/Supplier/SupplierList'
@@ -8,7 +9,10 @@ import SupplierForm from './pages/Supplier/SupplierForm'
 import ProductList from './pages/Product/ProductList'
 import ProductForm from './pages/Product/ProductForm'
 import CostumerForm from './pages/Costumer/CostumerForm'
+import CostumerList from './pages/Costumer/CostumerList'
+import CostumerDetails from './pages/Costumer/CostumerDetails'
 
+// Modal.setAppElement('#root');
 
 const App = () => {
   return (
@@ -24,6 +28,8 @@ const App = () => {
           <Route path='/add-produto' element={<ProductForm />}/>
           <Route path='/editar-produto/:id' element={<ProductForm />}/>
           <Route path='/add-costumer' element={<CostumerForm />} />
+          <Route path='/listar-clientes' element={<CostumerList />} />
+          <Route path='/detalhes-cliente/:id' element={<CostumerDetails />} />
         </Routes>
       </div>
 

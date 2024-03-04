@@ -57,7 +57,7 @@ const CostumerForm = () => {
 
         axios.get(`https://viacep.com.br/ws/${cep}/json/`)
             .then(response => {
-                if(response.data.erro) {
+                if (response.data.erro) {
                     alert("CEP não encontrado")
                     setCepLoading(false)
                     return

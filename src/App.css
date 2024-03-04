@@ -355,7 +355,7 @@ body {
   font-size: 22px;
   transition: background-color 0.3s ease-in-out;
   padding: 10px 20px;
-  margin: 0 10px; /* Adiciona margem horizontal entre os itens do menu */
+  /* margin: 0 2px; /*Adiciona margem horizontal entre os itens do menu */
 }
 
 .menu-item:hover,
@@ -523,4 +523,64 @@ p {
 color: #555;
 font-size: 20px;
 margin-bottom: 10px;
+}
+
+/* Logo do menu*/
+.logo {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  border-radius: 100%; 
+  width: 30px; 
+  height: 30px; 
+}
+
+
+/* Css do Home */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+}
+
+.box h2 {
+  font-size: 24px;
+  color: #3672b3;
+  margin-bottom: 10px;
+}
+
+.box-data {
+  color: #3672b3;
+  border-top: 2px solid #3672b3;
+  margin-top: 20px;
+}
+
+.box-data, h2{
+  margin-top: 20px;
+}
+
+.box-icon {
+  display: flex;
+  justify-content: space-between; /* Alinha os itens nas extremidades */
+  align-items: center; /* Centraliza verticalmente os itens */
+  font-size: 34px;
+  color: #3672b3;
 }

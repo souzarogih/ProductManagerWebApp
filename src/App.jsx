@@ -11,6 +11,7 @@ import ProductForm from './pages/Product/ProductForm'
 import CostumerForm from './pages/Costumer/CostumerForm'
 import CostumerList from './pages/Costumer/CostumerList'
 import CostumerDetails from './pages/Costumer/CostumerDetails'
+import Home from './pages/Home/Home';
 
 // Modal.setAppElement('#root');
 
@@ -20,7 +21,7 @@ const App = () => {
       <Navbar />
       <div className="container">
         <Routes>
-          <Route path="/" element={<SupplierList />} />
+          <Route path="/" element={<Home />} />
           <Route path="/add-fornecedor" element={<SupplierForm />}/>
           <Route path="/listar-fornecedores" element={<SupplierList />} />
           <Route path="/editar-fornecedor/:id" element={<SupplierForm />}/>

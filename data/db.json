@@ -160,22 +160,34 @@
     {
       "id": 1,
       "value": 10.00,
-      "product": "Leite"
+      "qtd": 5,
+      "data": "06/03/2024 10:15:21",
+      "product": "Leite",
+      "status": "APROVDA"
     },
     {
       "id": 2,
       "value": 32.50,
-      "product": "Baicon"
+      "qtd": 6,
+      "data": "03/03/2024 09:12:05",
+      "product": "Baicon",
+      "status": "RECUSA"
     },
     {
       "id": 3,
       "value": 11.50,
-      "product": "Sabão em pó"
+      "qtd": 3,
+      "data": "02/03/2024 20:05:51",
+      "product": "Sabão em pó",
+      "status": "RECUSADA"
     },
     {
       "id": 4,
       "value": 25.00,
-      "product": "Biscoito"
+      "qtd": 2,
+      "data": "01/03/2024 12:21:44",
+      "product": "Biscoito",
+      "status": "APROVDA"
     }
   ]
 }

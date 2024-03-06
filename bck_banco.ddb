@@ -1,34 +1,16 @@
 {
   "suppliers": [
     {
-      "id": 16,
-      "name": "GSX Distribuidora LTDA",
-      "cnpj": "23.315.123/0001-01",
-      "email": "sac@gxdistribuidora.com.br"
-    },
-    {
       "id": 17,
       "name": "Gracejo Alimentos LTDAAAAAAAA",
       "cnpj": "22.315.120/0001-05",
-      "email": "sac@maria.com.br"
-    },
-    {
-      "id": 18,
-      "name": "Varman Distribuidora LTDA",
-      "cnpj": "41.105.123/0001-10",
-      "email": "sac@gxdistribuidora.com.br"
+      "email": "sac@gracejo.com.br"
     },
     {
       "id": 19,
       "name": "Paraiba Peças LTDA",
       "cnpj": "23.315.839/0001-01",
       "email": "sac@pbpecas.com.br"
-    },
-    {
-      "id": 20,
-      "name": "Semear sementes LTDA",
-      "cnpj": "22.426.320/0001-05",
-      "email": "sac@semear.com.br"
     },
     {
       "id": 21,
@@ -41,35 +23,171 @@
     {
       "id": 161,
       "name": "Placa mãe asus",
-      "price": 3500.00,
-      "supplierId": 16
+      "price": 3500,
+      "stock": 200,
+      "supplierId": 17
     },
     {
       "id": 162,
       "name": "Placa de video nvidia",
-      "price": 2000.00,
-      "supplierId": 16
-    },{
+      "price": 2000,
+      "stock": 120,
+      "supplierId": 17
+    },
+    {
       "id": 163,
       "name": "Placa de Vídeo Gforce",
-      "price": 3500.00,
-      "supplierId": 16
-    },{
+      "price": 3500,
+      "stock": 70,
+      "supplierId": 17
+    },
+    {
       "id": 171,
       "name": "Macarrão Vitarela",
-      "price": 5.00,
-      "supplierId": 16
+      "price": 5,
+      "stock": 34,
+      "supplierId": 21
     },
     {
       "id": 172,
       "name": "Arroz Tio João",
       "price": 10.45,
-      "supplierId": 16
-    },{
+      "stock": 104,
+      "supplierId": 21
+    },
+    {
       "id": 173,
       "name": "Feijão Cometa",
       "price": 3.98,
-      "supplierId": 16
+      "stock": 26,
+      "supplierId": 21
+    }
+  ],
+  "costumers": [
+    {
+      "id": 1,
+      "name": "João Silva",
+      "cpf": "700.113.440-67",
+      "email": "joaosilva@gmail.com",
+      "zipcode": "55555-555",
+      "street": "Rua de Teste",
+      "number": "100",
+      "neighborhood": "Mangabeira",
+      "city": "João Pessoa",
+      "state": "Paraíba",
+      "country": "Brasil"
+    },
+    {
+      "name": "Pedro Matias",
+      "cpf": "712.628.820-44",
+      "email": "pedromatias@gmail.com",
+      "zipcode": "58079000",
+      "street": "Rua Josefa Miranda Freire",
+      "number": "105",
+      "neighborhood": "Jardim Oceania",
+      "city": "João Pessoa",
+      "state": "Paraíba",
+      "country": "Brasil",
+      "id": 2
+    },
+    {
+      "name": "Higor Souza",
+      "cpf": "712.628.820-44",
+      "email": "higor.andrade@hotmail.com",
+      "zipcode": "58058-300",
+      "street": "Rua Estudante Marizete da Silva Nascimento",
+      "number": "88",
+      "neighborhood": "Mangabeira",
+      "city": "João Pessoa",
+      "state": "PB",
+      "country": "Brasil",
+      "id": 3
+    },
+    {
+      "name": "João Paulo",
+      "cpf": "087.662.100-03",
+      "email": "joaopaulo@hotmail.com",
+      "zipcode": "58078230",
+      "street": "Rua Psicóloga Simone Pereira Souto",
+      "number": "234",
+      "neighborhood": "Funcionários",
+      "city": "João Pessoa",
+      "state": "PB",
+      "country": "Brasil",
+      "id": 4
+    },
+    {
+      "name": "Maria José",
+      "cpf": "299.913.730-39",
+      "email": "mariajose@hotmail.com",
+      "zipcode": "58078230",
+      "street": "Rua Psicóloga Simone Pereira Souto",
+      "number": "234",
+      "neighborhood": "Funcionários",
+      "city": "João Pessoa",
+      "state": "PB",
+      "country": "Brasil",
+      "id": 5
+    }
+  ],
+  "dashboard": [
+    {
+      "id": 1,
+      "createdThisWeek": "7",
+      "createdLastWeek": "9",
+      "createdThisMonth": "15",
+      "createdLastMonth": "20",
+      "totalItens": "77"
+    },
+    {
+      "id": 2,
+      "createdThisWeek": "16",
+      "createdLastWeek": "25",
+      "createdThisMonth": "50",
+      "createdLastMonth": "65",
+      "totalItens": "119"
+    },
+    {
+      "id": 3,
+      "createdThisWeek": "19",
+      "createdLastWeek": "28",
+      "createdThisMonth": "31",
+      "createdLastMonth": "49",
+      "totalItens": "187"
+    }
+  ],
+  "sales": [
+    {
+      "id": 1,
+      "value": 10.00,
+      "qtd": 5,
+      "data": "06/03/2024 10:15:21",
+      "product": "Leite",
+      "status": "APROVDA"
+    },
+    {
+      "id": 2,
+      "value": 32.50,
+      "qtd": 6,
+      "data": "03/03/2024 09:12:05",
+      "product": "Baicon",
+      "status": "RECUSA"
+    },
+    {
+      "id": 3,
+      "value": 11.50,
+      "qtd": 3,
+      "data": "02/03/2024 20:05:51",
+      "product": "Sabão em pó",
+      "status": "RECUSADA"
+    },
+    {
+      "id": 4,
+      "value": 25.00,
+      "qtd": 2,
+      "data": "01/03/2024 12:21:44",
+      "product": "Biscoito",
+      "status": "APROVDA"
     }
   ]
 }

@@ -86,6 +86,23 @@
   border-radius: 8px;
 }
 
+.container div h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.container-tables {
+  max-width: 90%;
+  margin: 15px auto;
+  max-width: 90vw;
+  padding: 10px 15px 10px 15px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -167,7 +184,7 @@
 }
 
 .form-control{
-  border-color: red;
+  border-color: #4169E1;
 }
 
 
@@ -352,9 +369,10 @@ body {
 .menu-item {
   text-decoration: none;
   color: white;
-  font-size: 22px;
+  font-size: 24px;
   transition: background-color 0.3s ease-in-out;
   padding: 10px 20px;
+  /* font-size: ; */
   /* margin: 0 2px; /*Adiciona margem horizontal entre os itens do menu */
 }
 
@@ -416,7 +434,7 @@ body {
   margin: 40px auto;
   max-width: 90vw;
   padding: 20px;
-  background-color: white;
+  background-color: #fff; /*-----*/
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
 }
@@ -531,8 +549,8 @@ margin-bottom: 10px;
   bottom: 0;
   right: 0;
   border-radius: 100%; 
-  width: 30px; 
-  height: 30px; 
+  width: 45px; 
+  height: 45px; 
 }
 
 
@@ -541,13 +559,16 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #fff;  /*aaaaaaaa*/
 }
 
 .dashboard {
   display: flex;
+  flex-wrap: wrap; /* Adicione esta linha para permitir a quebra de linha */
   justify-content: space-around;
   padding: 20px;
+  background-color: #3672b3; /*aaaaaaaa*/
+  border-radius: 0.5%;
 }
 
 .box {
@@ -567,6 +588,10 @@ body {
   margin-bottom: 10px;
 }
 
+.box-number{
+  font-weight: bold;
+}
+
 .box-data {
   color: #3672b3;
   border-top: 2px solid #3672b3;
@@ -575,12 +600,73 @@ body {
 
 .box-data, h2{
   margin-top: 20px;
+  font-weight: bold;
 }
 
 .box-icon {
   display: flex;
   justify-content: space-between; /* Alinha os itens nas extremidades */
   align-items: center; /* Centraliza verticalmente os itens */
-  font-size: 34px;
+  font-size: 50px;
   color: #3672b3;
+}
+
+.container {
+  width: 100%; /* Garanta que a tabela ocupe a largura total */
+  margin-top: 20px; /* Adicione margem acima da tabela */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #3680c5;
+  color: white;
+  font-size: 18px;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+
+/* Table do dashboard*/
+
+.container-dashboard {
+  width: 100%; /* Garanta que a tabela ocupe a largura total */
+  margin-top: 20px; /* Adicione margem acima da tabela */
+}
+
+.table-dashboard {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+}
+
+.table-dashboard th,
+.table-dashboard td {
+  text-align: center;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-dashboard th {
+  background-color: #3680c5;
+  color: white;
+  font-size: 18px;
+}
+
+.table-dashboard tr:nth-child(even) {
+  background-color: #f2f2f2;
 }

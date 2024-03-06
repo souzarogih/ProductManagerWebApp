@@ -12,6 +12,7 @@ import CostumerForm from './pages/Costumer/CostumerForm'
 import CostumerList from './pages/Costumer/CostumerList'
 import CostumerDetails from './pages/Costumer/CostumerDetails'
 import Home from './pages/Home/Home';
+import SalesList from './pages/Sales/SalesList';
 
 // Modal.setAppElement('#root');
 
@@ -31,6 +32,7 @@ const App = () => {
           <Route path='/add-costumer' element={<CostumerForm />} />
           <Route path='/listar-clientes' element={<CostumerList />} />
           <Route path='/detalhes-cliente/:id' element={<CostumerDetails />} />
+          <Route path='/listar-vendas' element={<SalesList />} />
         </Routes>
       </div>
 

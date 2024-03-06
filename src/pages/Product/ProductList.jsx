@@ -56,35 +56,35 @@ const ProductList = () => {
             <h2 className='mb-4'>Lista de Produtos</h2>
 
             <button 
-                title=""
+                title="Criar protudo"
                 onClick={() => navigate('/add-produto')} 
                 className='btn btn-primary mb-2 mr-4 m-1'>
                 <FontAwesomeIcon icon={faPlus} /> 
             </button>
 
             <button 
-                title=""
+                title="Atualizar pagina"
                 className='btn btn-primary mb-2 ml-4 m-1'>
                 <FontAwesomeIcon icon={faArrowsRotate} 
                 onClick={fetchProducts} />
             </button>
             
             <button 
-                title=""
+                title="Editar produto"
                 onClick={() => navigate(`/editar-produto/${selectedProductId}`)} 
                 className='btn btn-primary mr-2 mb-2 m-1'>
                 <FontAwesomeIcon icon={faPenToSquare} />
             </button>
            
             <button 
-                title=""
+                title="Remover produto"
                 onClick={() => deleteProduct(selectedProductId)} 
                 className='btn btn-primary mb-2 ml-2 m-1'>
                 <FontAwesomeIcon icon={faTrash} />
             </button>
            
             <button
-                title=""
+                title="Detalhes do produto"
                 onClick={() => getProduct(selectedProductId)}
                 className='btn btn-primary mb-2 ml-2 m-1'>
                 <FontAwesomeIcon icon={faEye} />
@@ -97,6 +97,7 @@ const ProductList = () => {
                         <th>PREÇO</th>
                         <th>FORNECEDOR</th>
                         <th>ESTOQUE</th>
+                        <th>STATUS</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -107,9 +108,7 @@ const ProductList = () => {
                                 <td>{product.price}</td>
                                 <td>{product.supplier.name}</td>
                                 <td>{product.stock}</td>
-                                <td>
-
-                                </td>
+                                <td>{product.status}</td>
                             </tr>
                         ))
                     }

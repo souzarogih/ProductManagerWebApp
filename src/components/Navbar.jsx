@@ -36,6 +36,14 @@ const Navbar = () => {
             <Link to="/add-costumer">Adicionar Cliente</Link>
           </div>
         </div>
+
+        <div className='submenu'>
+          <Link to="/sales" className="menu-item">Vendas</Link>
+          <div className="submenu-content">
+            <Link to="/listar-vendas">Listar Vendas</Link>
+          </div>
+        </div>
+        
       </div>
     </nav>
 

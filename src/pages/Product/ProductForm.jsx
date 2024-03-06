@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from '../../api'
+import { MdFileDownloadDone, MdOutlineCancel } from "react-icons/md";
 
 const ProductForm = () => {
 
@@ -104,14 +105,19 @@ const ProductForm = () => {
         <button
           type='submit'
           title='Salvar'
-          className={id ? 'btn btn-warning mr-2 mb-2 m-1' : 'btn btn-success mr-2 mb-2 m-1'}>{id ? 'Editar' : 'Adicionar'}
+          // className={id ? 'btn btn-warning mr-2 mb-2 m-1' : 'btn btn-success mr-2 mb-2 m-1'}>{id ? 'Editar' : 'Adicionar'}
+          className={id ? 'btn btn-warning mr-2 mb-2 m-1' : 'btn btn-success mr-2 mb-2 m-1'}>
+          <MdFileDownloadDone style={{ fontSize: '1em', color: 'white' }} />
+          Adicionar
         </button>
 
         <button
           onClick={() => navigate('/listar-produtos')} 
           title='Cancelar'
           type='submit'
-          className='btn btn-danger mr-2 mb-2 m-1'>Cancelar
+          className='btn btn-danger mr-2 mb-2 m-1'>
+            <MdOutlineCancel style={{ fontSize: '1em', color: 'white' }} />
+                        Cancelar
         </button>
 
       </form>

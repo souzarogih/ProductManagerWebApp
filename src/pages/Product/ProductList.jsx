@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from '../../api';
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faPenToSquare, faTrash, faPlus, faArrowsRotate, faEye } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom';
+import { FaTrash } from 'react-icons/fa';
+import { TiPlus } from "react-icons/ti";
+import { IoMdRefresh, IoMdEye, IoMdClose } from "react-icons/io";
+import { MdModeEditOutline } from "react-icons/md";
 
 const ProductList = () => {
     const [products, setProducts] = useState([]);
@@ -59,35 +63,35 @@ const ProductList = () => {
                 title="Criar protudo"
                 onClick={() => navigate('/add-produto')} 
                 className='btn btn-primary mb-2 mr-4 m-1'>
-                <FontAwesomeIcon icon={faPlus} /> 
+                <TiPlus style={{ fontSize: '1em', color: 'white' }} />
             </button>
 
             <button 
                 title="Atualizar pagina"
-                className='btn btn-primary mb-2 ml-4 m-1'>
-                <FontAwesomeIcon icon={faArrowsRotate} 
-                onClick={fetchProducts} />
+                className='btn btn-primary mb-2 ml-4 m-1'
+                onClick={fetchProducts}>
+                <IoMdRefresh style={{ fontSize: '1em', color: 'white' }} /> 
             </button>
             
             <button 
                 title="Editar produto"
                 onClick={() => navigate(`/editar-produto/${selectedProductId}`)} 
                 className='btn btn-primary mr-2 mb-2 m-1'>
-                <FontAwesomeIcon icon={faPenToSquare} />
+                <MdModeEditOutline style={{ fontSize: '1em', color: 'white' }} />
             </button>
            
             <button 
                 title="Remover produto"
                 onClick={() => deleteProduct(selectedProductId)} 
                 className='btn btn-primary mb-2 ml-2 m-1'>
-                <FontAwesomeIcon icon={faTrash} />
+                <FaTrash style={{ fontSize: '1em', color: 'white' }} />
             </button>
            
             <button
                 title="Detalhes do produto"
                 onClick={() => getProduct(selectedProductId)}
                 className='btn btn-primary mb-2 ml-2 m-1'>
-                <FontAwesomeIcon icon={faEye} />
+                <IoMdEye style={{ fontSize: '1em', color: 'white' }} />
             </button>
            
             <table className='table'>

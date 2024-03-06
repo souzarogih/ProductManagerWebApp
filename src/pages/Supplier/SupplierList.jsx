@@ -183,6 +183,10 @@ import axios from '../../api';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare, faTrash, faPlus, faArrowsRotate, faEye } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
+import { FaTrash } from 'react-icons/fa';
+import { TiPlus } from "react-icons/ti";
+import { IoMdRefresh, IoMdEye, IoMdClose } from "react-icons/io";
+import { MdModeEditOutline } from "react-icons/md";
 
 const SupplierList = () => {
 
@@ -220,32 +224,43 @@ const SupplierList = () => {
         <div className="container mt-5">
             <h2 className='mb-4'>Lista de Fornecedores</h2>
 
-            <button 
-                title="Adicionar fornecedor" 
-                onClick={() => navigate('/add-fornecedor')} 
+            <button
+                title="Adicionar fornecedor"
+                onClick={() => navigate('/add-fornecedor')}
                 className='btn btn-primary mb-2 mr-4 m-1'>
-                <FontAwesomeIcon icon={faPlus} />
+                {/* <FontAwesomeIcon icon={faPlus} /> */}
+                <TiPlus style={{ fontSize: '1em', color: 'white' }} />
             </button>
 
-            <button 
-                title="Recarregar dados da tela" 
-                onClick={fetchSuppliers} 
+            <button
+                title="Recarregar dados da tela"
+                onClick={fetchSuppliers}
                 className='btn btn-primary mb-2 ml-4 m-1'>
-                <FontAwesomeIcon icon={faArrowsRotate} />
+                {/* <FontAwesomeIcon icon={faArrowsRotate} /> */}
+                <IoMdRefresh style={{ fontSize: '1em', color: 'white' }} />
             </button>
 
-            <button 
-                title="Editar um fornecedor" 
-                onClick={() => navigate(`/editar-fornecedor/${selectedSupplierId}`)} 
+            <button
+                title="Editar um fornecedor"
+                onClick={() => navigate(`/editar-fornecedor/${selectedSupplierId}`)}
                 className='btn btn-primary mr-2 mb-2 m-1'>
-                <FontAwesomeIcon icon={faPenToSquare} />
+                {/* <FontAwesomeIcon icon={faPenToSquare} /> */}
+                <MdModeEditOutline style={{ fontSize: '1em', color: 'white' }} />
             </button>
 
-            <button 
-                title="Remover um fornecedor" 
-                onClick={() => deleteSupplier(selectedSupplierId)} 
+            <button
+                title="Remover um fornecedor"
+                onClick={() => deleteSupplier(selectedSupplierId)}
                 className='btn btn-primary mb-2 ml-2 m-1'>
-                <FontAwesomeIcon icon={faTrash} />
+                {/* <FontAwesomeIcon icon={faTrash} /> */}
+                <FaTrash style={{ fontSize: '1em', color: 'white' }} />
+            </button>
+
+            <button
+                title="Detalhes do fornecedor"
+                onClick={() => getSupplier(selectedSupplierId)}
+                className='btn btn-primary mb-2 ml-2 m-1'>
+                <IoMdEye style={{ fontSize: '1em', color: 'white' }} />
             </button>
 
             <table className='table'>
@@ -259,9 +274,9 @@ const SupplierList = () => {
                 <tbody>
                     {
                         suppliers.map(supplier => (
-                            <tr key={supplier.id} 
-                            className={selectedSupplierId === supplier.id ? 'selected-row' : ''} 
-                            onClick={() => setSelectedSupplierId(supplier.id)}>
+                            <tr key={supplier.id}
+                                className={selectedSupplierId === supplier.id ? 'selected-row' : ''}
+                                onClick={() => setSelectedSupplierId(supplier.id)}>
                                 <td>{supplier.name}</td>
                                 <td>{supplier.cnpj}</td>
                                 <td>{supplier.email}</td>

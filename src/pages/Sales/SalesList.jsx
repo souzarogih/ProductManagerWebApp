@@ -4,6 +4,11 @@ import axios from '../../api';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faCircleXmark, faHeart, faPenToSquare, faTrash, faPlus, faArrowsRotate, faEye } from '@fortawesome/free-solid-svg-icons';
+import { FaTrash } from 'react-icons/fa';
+// import { RiLoginCircleFill } from "react-icons/ri";
+import { TiPlus } from "react-icons/ti";
+import { IoMdRefresh, IoMdEye, IoMdClose } from "react-icons/io";
+import { MdModeEditOutline } from "react-icons/md";
 
 Modal.setAppElement("#root");
 
@@ -71,10 +76,7 @@ const SalesList = () => {
       .catch(error => console.error("Ocorreu um erro ao obter um fornecedor: ", error))
   }
 
-
-
   return (
-
 
     <div className="container mt-5">
       <h2 className='mb-4'>Lista de Vendas</h2>
@@ -87,35 +89,35 @@ const SalesList = () => {
         title="Criar venda"
         onClick={() => setOpenModal(true)}
         className='btn btn-primary mb-2 mr-4 m-1'>
-        <FontAwesomeIcon icon={faPlus} />
+        <TiPlus style={{ fontSize: '1em', color: 'white' }} />
       </button>
 
       <button
         title="Atualizar venda"
+        onClick={fetchSales}
         className='btn btn-primary mb-2 ml-4 m-1'>
-        <FontAwesomeIcon icon={faArrowsRotate}
-          onClick={fetchSales} />
+        <IoMdRefresh style={{ fontSize: '1em', color: 'white' }} />
       </button>
 
       <button
         title="Editar venda"
         onClick={() => navigate(`/editar-venda/${selectedSalesId}`)}
         className='btn btn-primary mr-2 mb-2 m-1'>
-        <FontAwesomeIcon icon={faPenToSquare} />
+        <MdModeEditOutline style={{ fontSize: '1em', color: 'white' }} />
       </button>
 
       <button
         title="Remover venda"
         onClick={() => deleteSale(selectedSalesId)}
         className='btn btn-primary mb-2 ml-2 m-1'>
-        <FontAwesomeIcon icon={faTrash} />
+        <FaTrash style={{ fontSize: '1em', color: 'white' }} />
       </button>
 
       <button
         title="Detalhes do venda"
         onClick={() => getSale(selectedSalesId)}
         className='btn btn-primary mb-2 ml-2 m-1'>
-        <FontAwesomeIcon icon={faEye} />
+        <IoMdEye style={{ fontSize: '1em', color: 'white' }} />
       </button>
 
       <table className='table'>
@@ -126,7 +128,6 @@ const SalesList = () => {
             <th>QUANTIDADE</th>
             <th>VALOR</th>
             <th>STATUS</th>
-            {/* <th>STATUS</th> */}
           </tr>
         </thead>
         <tbody>
@@ -138,15 +139,11 @@ const SalesList = () => {
                 <td>{sale.qtd}</td>
                 <td>{sale.value}</td>
                 <td>{sale.status}</td>
-                {/* <td>{product.stock}</td> */}
-                {/* <td>{product.status}</td> */}
               </tr>
             ))
           }
         </tbody>
       </table>
-      {/* </div> */}
-
 
       <Modal isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}>
 
@@ -165,8 +162,8 @@ const SalesList = () => {
                 value={sales.name}
                 placeholder='Mouse Gamer'
                 onChange={handleChange}
-                // required
-                 />
+              // required
+              />
             </div>
 
             <div className='form-group'>
@@ -179,8 +176,8 @@ const SalesList = () => {
                 // value={sales.price}
                 placeholder='00,00'
                 onChange={handleChange}
-                // required
-                 />
+              // required
+              />
             </div>
 
             <div className='form-group'>
@@ -191,7 +188,7 @@ const SalesList = () => {
                 name='supplierId'
                 value={sales.supplierId}
                 onChange={handleChange}
-                // required
+              // required
               >
 
                 <option value="">Selecione um fornecedor</option>
@@ -218,11 +215,12 @@ const SalesList = () => {
               title='Cancelar'
               type='button'
               className='btn btn-danger mr-2 mb-2 m-1'>
-                Cancelar
+              Cancelar
             </button>
 
             <button onClick={() => setOpenModal(false)}>
               <FontAwesomeIcon icon={faXmark} />
+              {/* <IoMdClose style={{ fontSize: '1em', color: 'white' }} /> */}
             </button>
 
           </form>

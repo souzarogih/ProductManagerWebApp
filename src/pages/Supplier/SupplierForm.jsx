@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from '../../api'
 import { MdFileDownloadDone, MdOutlineCancel } from "react-icons/md";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SupplierForm = () => {
 
@@ -26,6 +28,17 @@ const SupplierForm = () => {
         setSupplier(prevState => ({ ...prevState, [name]: value }))
     }
 
+    const showToast = () => {
+        toast.success('Fornecedor salvo com sucesso!', {
+          position: 'bottom-right',
+          autoClose: 3000, // fecha automaticamente após 3 segundos
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+      };
+
     function handleSubmit(event) {
         event.preventDefault() //impede que a pagina seja recarregada ao apertar no botão submit
 
@@ -34,11 +47,14 @@ const SupplierForm = () => {
 
         axios[method](url, supplier)
             .then(() => {
-                alert(`Fornecedor ${id ? "atualizado" : "adicionado"} com sucesso.`)
+                // alert(`Fornecedor ${id ? "atualizado" : "adicionado"} com sucesso.`)
+                showToast();
                 navigate("/listar-fornecedores") //redireionar para pagina principal
             })
             .catch(error => console.error("Ocorreu um erro ao obter um fornecedor: ", error))
     }
+
+    
 
     return (
         <div className='container mt-5'>
@@ -100,9 +116,11 @@ const SupplierForm = () => {
                         Cancelar
                 </button>
 
+                
+
             </form>
 
-
+            
         </div>
     )
 }

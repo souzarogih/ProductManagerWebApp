@@ -13,8 +13,7 @@ import CostumerList from './pages/Costumer/CostumerList'
 import CostumerDetails from './pages/Costumer/CostumerDetails'
 import Home from './pages/Home/Home';
 import SalesList from './pages/Sales/SalesList';
-
-// Modal.setAppElement('#root');
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
   return (
@@ -34,6 +33,7 @@ const App = () => {
           <Route path='/detalhes-cliente/:id' element={<CostumerDetails />} />
           <Route path='/listar-vendas' element={<SalesList />} />
         </Routes>
+        <ToastContainer />
       </div>
 
     </BrowserRouter>

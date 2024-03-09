@@ -11,3 +11,5 @@ Currently, two official plugins are available:
 npm install --save react-modal
 npm install styled-components
 npm install react-icons   
+
+https://www.npmjs.com/package/react-toastify
